@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        android:contentDescription="@string/str_todo"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg" />
+
+    <ImageView
+        android:id="@+id/ivHomeicon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_home"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:contentDescription="@string/str_nfc_homepage" />
+
+
+    <LinearLayout
+        android:id="@+id/llOverview"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_below="@+id/ivHomeicon"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/card_view"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:paddingTop="70dp"
+            android:fontFamily="cursive"
+            android:text="MRT E-TICKETING"
+            android:textColor="#fff"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold" />
+
+        <!--
+
+        <TextView
+            android:id="@+id/tvMobileWalletBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SGD 1,285.55"
+            android:textSize="25dp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-black"
+            android:paddingLeft="40dp"
+            android:paddingTop="10dp"/>
+-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llOverview"
+        android:orientation="vertical"
+        android:padding="20dp" >
+
+        <RelativeLayout
+            android:id="@+id/rlMainActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_home">
+
+            <ImageView
+                android:id="@+id/ivMainActivityNfc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/str_todo"
+                android:src="@drawable/ic_card_reader" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/ivMainActivityNfc"
+                android:layout_toRightOf="@+id/ivMainActivityNfc">
+
+                <TextView
+                    android:id="@+id/tvMainActivityNfc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/str_pay_for_e_ticketing"
+                    android:textColor="@android:color/white"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvMainActivityNfc"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text=""
+                    android:textColor="#60ffffff"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlHistoryActivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_home">
+
+            <ImageView
+                android:id="@+id/ivHistoryActivityNfc"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/str_todo"
+                android:src="@drawable/history_2" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toEndOf="@+id/ivHistoryActivityNfc"
+                android:layout_toRightOf="@+id/ivHistoryActivityNfc">
+
+                <TextView
+                    android:id="@+id/tvHistoryActivityNfc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/str_transaction_history"
+                    android:textColor="@android:color/white"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvHistoryActivityNfc"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:text="Check your payment history"
+                    android:textColor="#60ffffff"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

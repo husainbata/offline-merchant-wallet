@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_2"
+    tools:context=".OfflineCardTransfersActivity">
+
+    <RelativeLayout
+        android:id="@+id/rlBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--<ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:contentDescription="@string/str_todo"
+            android:padding="@dimen/_10sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_back" />-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_centerInParent="true"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:text="@string/str_pay_for_e_ticketing"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlCardTransaction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlBack" >
+<!--
+
+        <RelativeLayout
+            android:id="@+id/r1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/_15sdp"
+            android:paddingTop="@dimen/_15sdp"
+            android:paddingRight="@dimen/_15sdp">
+
+            <TextView
+                android:id="@+id/tt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.03"
+                android:text="@string/str_whispercash_card_balance"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/_15sdp" />
+
+            <TextView
+                android:id="@+id/balanceText"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginLeft="@dimen/_65sdp"
+                android:layout_toRightOf="@+id/tt1"
+                android:inputType="number"
+                android:text="SGD 0"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/_15sdp" />
+
+            <Button
+                android:id="@+id/balanceButton"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:background="@color/cardview_shadow_end_color"
+                android:drawableStart="@drawable/sync_40"
+                android:onClick="doGetBalance" />
+
+        </RelativeLayout>
+-->
+<!--
+
+        <RelativeLayout
+            android:id="@+id/r2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/r1"
+            android:paddingLeft="@dimen/_15sdp"
+            android:paddingTop="@dimen/_15sdp"
+            android:paddingRight="@dimen/_15sdp">
+
+            <TextView
+                android:id="@+id/tt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.03"
+                android:text="Amount"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/_15sdp" />
+
+            <EditText
+                android:id="@+id/etTopUpAmount"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_70sdp"
+                android:layout_toRightOf="@+id/tt2"
+                android:inputType="number"
+                android:text=""
+                android:textColor="#ffffff"
+                android:textSize="@dimen/_15sdp" />
+
+            <Button
+                android:id="@+id/topUpButton"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:onClick="doTopUp"
+                android:text="@string/str_ok_button" />
+
+        </RelativeLayout>
+-->
+
+
+        <RelativeLayout
+            android:id="@+id/r3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/_15sdp"
+            android:paddingTop="@dimen/_80sdp"
+            android:paddingRight="@dimen/_15sdp"
+            android:paddingBottom="@dimen/_15sdp">
+
+            <TextView
+                android:id="@+id/tt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.03"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:text="AMOUNT"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etCharge"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_toRightOf="@+id/tt3"
+                android:inputType="number"
+                android:text=""
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_15sdp" />
+
+            <Button
+                android:id="@+id/chargeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_toRightOf="@+id/etCharge"
+                android:background="@color/colorPrimary"
+                android:onClick="doCharge"
+                android:text="PAY" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlGif"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlCardTransaction">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/imgRead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="15dp"
+            android:onClick="doTopUp"
+            android:src="@drawable/gif_card" />
+
+    </RelativeLayout>
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/imgRight"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/gif_sucess"/>
+
+</RelativeLayout>
